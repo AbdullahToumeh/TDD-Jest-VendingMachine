@@ -11,10 +11,10 @@ describe("vendingMachine", () => {
       expect(result).toEqual(products);
     });
   });
-  describe("when stockUpProducts is called with a stock of 0", () => {
+  describe("when stockUpProducts is called with a stock of 3", () => {
     it("should return stock up according to the name and amount of stock up", () => {
-      const result = Machine.stockUpProducts(products.Vodka.name, 10);
-      expect(result).toEqual(10);
+      const result = Machine.stockUpProducts(products.Coke.name, 10);
+      expect(result).toEqual(13);
     });
   });
   describe("when stockUpProducts is called with a stock of 10", () => {
@@ -43,6 +43,26 @@ describe("vendingMachine", () => {
       expect(result).toBe(
         "There is 41 left and it does not need to be restocked."
       );
+    });
+  });
+  describe("when chooseProduct is called for product with stock with exact amountInsterted to price", () => {
+    it("should return Product", () => {
+      const result = Machine.chooseProduct(products.Redbull.name, 2.0);
+      expect(result).toBe(products.Redbull.name);
+    });
+  });
+  describe("when chooseProduct is called for product without stock with exact amountInsterted to price", () => {
+    it("should return There is not more stock left, please pick another product", () => {
+      const result = Machine.chooseProduct(products.Vodka.name, 2.5);
+      expect(result).toBe(
+        "There is not more stock left, please pick another product"
+      );
+    });
+  });
+  describe("when chooseProduct is called for product without stock without enough amountInsterted to price", () => {
+    it("should return There is not more stock left, please pick another product", () => {
+      const result = Machine.chooseProduct(products.Coke.name, 1.5);
+      expect(result).toBe("You do not have enough money, please put in 0.25");
     });
   });
 });
