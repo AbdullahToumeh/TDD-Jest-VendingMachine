@@ -48,13 +48,19 @@ describe("vendingMachine", () => {
   describe("when chooseProduct is called for product with stock with exact amountInsterted to price", () => {
     it("should return Product", () => {
       const result = Machine.chooseProduct(products.Redbull.name, 2.0);
-      expect(result).toBe(products.Redbull.name);
+      expect(result).toBe(
+        `Here is your ${products.Redbull.name}, there is now 9 left.`
+      );
     });
   });
   describe("when chooseProduct is called for product with stock with more amountInsterted to price", () => {
     it("should return Product + hello", () => {
       const result = Machine.chooseProduct(products.Orange.name, 2.5);
-      expect(result).toBe("Orange and your change is 0.75");
+      expect(result).toBe(
+        `Here is your ${
+          products.Orange.name
+        } and your change is 0.75, there is now 7 left.`
+      );
     });
   });
   describe("when chooseProduct is called for product without stock with exact amountInsterted to price", () => {
