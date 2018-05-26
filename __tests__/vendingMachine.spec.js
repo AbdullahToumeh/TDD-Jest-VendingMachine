@@ -21,7 +21,9 @@ describe("vendingMachine", () => {
     it("should return There is x left and it does not need to be restocked", () => {
       const result = Machine.stockUpProducts(products.Redbull.name, 10);
       expect(result).toBe(
-        "There is 10 left and it does not need to be restocked."
+        `There is ${
+          products.Redbull.stock
+        } left and it does not need to be restocked.`
       );
     });
   });
@@ -37,11 +39,13 @@ describe("vendingMachine", () => {
       expect(result).toEqual(30);
     });
   });
-  describe("when stockUpCoins is called with a stock of 41", () => {
+  describe("when stockUpCoins is called with a stock of 30", () => {
     it("should return There is x left and it does not need to be restocked", () => {
-      const result = Machine.stockUpCoins(coins.Quarter.name, 20);
+      const result = Machine.stockUpCoins(coins.Loonie.name, 20);
       expect(result).toBe(
-        "There is 41 left and it does not need to be restocked."
+        `There is ${
+          coins.Loonie.stock
+        } left and it does not need to be restocked.`
       );
     });
   });
@@ -75,6 +79,12 @@ describe("vendingMachine", () => {
     it("should return There is not more stock left, please pick another product", () => {
       const result = Machine.chooseProduct(products.Coke.name, 1.5);
       expect(result).toBe("You do not have enough money, please put in 0.25");
+    });
+  });
+  describe("testing change", () => {
+    it("should return 0.5", () => {
+      const result = Machine.returnChange(1.8, 1.5);
+      expect(result).toBe(0.5);
     });
   });
 });
