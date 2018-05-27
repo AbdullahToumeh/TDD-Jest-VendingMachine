@@ -27,6 +27,12 @@ describe("vendingMachine", () => {
       );
     });
   });
+  //   describe("when stockUpAllProducts is called ", () => {
+  //     it("should return addition to all stockup of inventory for products according to amount inputted (20)", () => {
+  //       const result = Machine.stockUpAllProducts(20);
+  //       expect(result).toBe(products);
+  //     });
+  //   });
   describe("when getCoins is called", () => {
     it("should return all coins", () => {
       const result = Machine.getCoins();
@@ -47,6 +53,12 @@ describe("vendingMachine", () => {
           coins.Loonie.stock
         } left and it does not need to be restocked.`
       );
+    });
+  });
+  describe("when stockUpAllCoins is called ", () => {
+    it("should return addition to all stockup of inventory for coins according to amount inputted (20)", () => {
+      const result = Machine.stockUpAllCoins(20);
+      expect(result).toBe(coins);
     });
   });
   describe("when chooseProduct is called for product with stock with exact amountInsterted to price", () => {
@@ -75,10 +87,16 @@ describe("vendingMachine", () => {
       );
     });
   });
-  describe("when chooseProduct is called for product without stock without enough amountInsterted to price", () => {
+  describe("when chooseProduct is called for product with stock without enough amountInsterted to price", () => {
     it("should return There is not more stock left, please pick another product", () => {
       const result = Machine.chooseProduct(products.Coke.name, 1.5);
       expect(result).toBe("You do not have enough money, please put in 0.25");
+    });
+  });
+  describe("when chooseProduct is called for product with stock without $0 amountInsterted to price", () => {
+    it("should return There is not more stock left, please pick another product", () => {
+      const result = Machine.chooseProduct(products.Coke.name, 0);
+      expect(result).toBe("You do not have enough money, please put in 1.75");
     });
   });
   describe("when stock all stock coins are available and return change is called", () => {
