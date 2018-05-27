@@ -31,6 +31,9 @@ it dispenses the next best option.</li>
 
 <h2>Installation/Testing</h2>
 <p>Download the repo and then in the root folder run </p>
+
 `npm install`
+
 <p>Test the code using Jest with</p>
+
 `npm test`
