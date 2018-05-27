@@ -81,10 +81,17 @@ describe("vendingMachine", () => {
       expect(result).toBe("You do not have enough money, please put in 0.25");
     });
   });
-  describe("testing change", () => {
-    it("should return 0.5", () => {
+  describe("when stock all stock coins are available and return change is called", () => {
+    it("should return change according to totalpaid - itemprice", () => {
       const result = Machine.returnChange(1.8, 1.5);
-      expect(result).toBe(0.5);
+      expect(result).toBe("Quarter:1 Nickel:1");
     });
   });
+  //need to run this inunstocked data
+  //   describe("when stock quarter && dimes are not stocked (quarter:0,dime:1) return change is called", () => {
+  //     it("should return change according to totalpaid - itemprice and not use any stock that is less then 1", () => {
+  //       const result = Machine.returnChange(2.0, 1.5);
+  //       expect(result).toBe("Nickel:10");
+  //     });
+  //   });
 });
