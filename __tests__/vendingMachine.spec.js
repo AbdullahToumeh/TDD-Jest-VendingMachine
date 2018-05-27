@@ -64,7 +64,7 @@ describe("vendingMachine", () => {
     });
   });
   describe("when chooseProduct is called for product with stock with more amountInsterted to price", () => {
-    it("should return Product + hello", () => {
+    it("should return Product", () => {
       const result = Machine.chooseProduct(products.Orange.name, 2.5);
       expect(result).toBe(`Here is your Orange.`);
     });

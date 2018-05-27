@@ -20,6 +20,19 @@ describe("ownerVendingMachine", () => {
   describe("when stockUpAllLowCoins is called", () => {
     it("should stock up all coins with less then 20 stock according to amount passed", () => {
       const result = Machine.stockUpAllLowCoins(10);
+      expect(result).toEqual(coins);
+    });
+  });
+  describe("when unStockProducts is called", () => {
+    it("should remove stock according to amount and product passed in", () => {
+      const result = Machine.unStockProducts(products.Coke.name, 1);
+      expect(result).toEqual(7);
+    });
+  });
+  describe("when unStockCoins is called", () => {
+    it("should remove stock according to amount and product passed in", () => {
+      const result = Machine.unStockCoins(coins.Dime.name, 1);
+      expect(result).toEqual(54);
     });
   });
 });
