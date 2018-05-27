@@ -1,0 +1,52 @@
+Vending Machine for customer.
+
+Title:
+    A customer puts $2.00 into a vending machine.
+
+Narrative: 
+    As a customer I want to be able to pick what food I want from the vending machine that I am able to buy with
+    the $2.00 I have so that it can satisfy my hunger and make me happy.      
+    In order to satisfy my hunger and make me happy, a customer wants to be able to pick what food he wants at his 
+    own will through A4 - D4 with a button that will dispense the food once pressed and is within his budget.
+
+Scenario:
+    Given an enviroment where the customer is able to use the vending machine
+    When the customer puts in $2.00, he should see how much he puts in and it will display what food he can buy
+    (either display all the food or food he can buy).
+    And when the customer has decided what to get, he should be able to press the button (through A4-D4).
+    Then when the customer has pressed the button, the food according to the label that he has picked should be 
+    dispensed down the vending machine. 
+    And in the case that that the customer has put too much money, he should get change with no pennies and rounded up
+    (canaidan prices, no taxes)
+    And in the case that the customer has put too little money, it should say how much money he is missing 
+    and how much more he should put in. The button will not work until the balance is exactly to the price
+    of the good.
+    **Extra** The customer has a button that will drop out all the change if needed to be. 
+
+-----------------------------------------------------------------------------------------------------
+Vending Machine for the owner of the vending machine.
+
+Title: 
+    The owner of the vending machine wants to manage the vending machine.
+
+Narrative:
+    As a the owner of the vending machine I want a feature to manage my inventory and change (as in coins)
+    so that it can help me manage the vending machine easier.
+    In order to make managing the vending machine easier, a owner wants a way to print all the inventory, 
+    in the case that one of the items are low or none, a owner wants a way to refill inventory and in the case 
+    that the change is low or none(x amount of coins left then have to refill), a owner wants to print
+    all the available change and a way to refill change and also.
+
+Scenario:
+    Given an environment where inventory is low (A2,B3,C1,D4) and change is 
+    low ($0.25 and $1.00 out of $0.05, $0.10, $2.00) but the owner does not know. 
+    When the owner presses a button, one for inventory and one for change, he should get a list
+    of all the inventory and change available.
+    And when he sees that the inventory or change is below x amount.
+    Then he should be able to input inventory and change that are below x through (function).
+
+
+
+
+
+
