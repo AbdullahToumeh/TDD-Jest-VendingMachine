@@ -17,6 +17,7 @@
 <li>Able to pick what product to choose from.</li>
 <li>Dispenses product along with change if the amount paid is more then the price.</li>
 <li>Able to tell the customer how much the customer is missing in the case that not enough is paid.</li>
+<li>Able to dispense the change inserted if customer does not want it or does not have enough money</li>
 </ul>
 
 <h2>Features for Owner</h2>
@@ -27,6 +28,7 @@ it dispenses the next best option.</li>
 <li>Able to unstock items/coins if needed.</li>
 <li>Vending machine will not dispense if not enough money is put in, in this case it will tell how much is missing</li>
 <li>Vending machine will not dispense if there is no stock.</li>
+<li>Automatic coin handling (inserted coins will be update coin storage and coins outputteed will update coin storage)</li>
 </ul>
 
 <h2>Installation/Testing</h2>
