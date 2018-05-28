@@ -1,5 +1,6 @@
 <h1>Vending Machine</h1>
-<img src="https://i.gyazo.com/7e0d38874153e465a78c8e45846d20ae.png" alt="https://gyazo.com/7e0d38874153e465a78c8e45846d20ae" width="569"/>
+<img src="https://i.gyazo.com/9755ebfef939b0ff973c2d1cb0d18bbf.png" alt="https://gyazo.com/9755ebfef939b0ff973c2d1cb0d18bbf" width="996"/>
+<img src="https://i.gyazo.com/09bacd237ac63798ea4118e3232de1a9.png" alt="https://gyazo.com/09bacd237ac63798ea4118e3232de1a9" width="996"/>
 
 <h2>About </h2>
 <p>Vending machine is a Javascript class based TDD project meant to mock a vending machine</p>
@@ -28,7 +29,7 @@ it dispenses the next best option.</li>
 <li>Able to unstock items/coins if needed.</li>
 <li>Vending machine will not dispense if not enough money is put in, in this case it will tell how much is missing</li>
 <li>Vending machine will not dispense if there is no stock.</li>
-<li>Automatic coin handling (inserted coins will be update coin storage and coins outputteed will update coin storage)</li>
+<li>Automatic coin handling (inserted coins will be update coin storage and coins outputted will update coin storage)</li>
 </ul>
 
 <h2>Installation/Testing</h2>

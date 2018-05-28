@@ -24,14 +24,25 @@ describe("customerVendingMachine", () => {
       );
     });
   });
+  //   describe("when enough coins are inserted via coinInsert, and product is not available but is chosen with master chooseProductVM", () => {
+  //     it("should product is not in stock", () => {
+  //       const result1 = Machine.coinInsert("Loonie");
+  //       const result2 = Machine.coinInsert("Loonie");
+  //       const result3 = Machine.chooseProductVM(products.Vodka.name);
+  //       const result4 = Machine.dispenseCoinBank();
+  //       expect(result4).toBe(
+  //         "There is no more stock left, please pick another product"
+  //       );
+  //     });
+  //   });
   describe("when coinBank is called after master chooseProductVM is used", () => {
     it("should return stock 0 for all coin bank", () => {
-      expect(Machine.getCoinBank()).toBe("coinBank");
+      expect(Machine.getCoinBank()).toBe(coinBank);
     });
   });
   describe("when getCoins is called after master chooseProductVM is used", () => {
     it("should updated stock for coins taking away the change the machine dispenses", () => {
-      expect(Machine.getCoins()).toBe("coins");
+      expect(Machine.getCoins()).toBe(coins);
     });
   });
 });
