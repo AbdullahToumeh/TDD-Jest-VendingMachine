@@ -26,12 +26,12 @@ describe("customerVendingMachine", () => {
   });
   describe("when coinBank is called after master chooseProductVM is used", () => {
     it("should return stock 0 for all coin bank", () => {
-      expect(Machine.getCoinBank()).toBe(coinBank);
+      expect(Machine.getCoinBank()).toBe("coinBank");
     });
   });
   describe("when getCoins is called after master chooseProductVM is used", () => {
     it("should updated stock for coins taking away the change the machine dispenses", () => {
-      expect(Machine.getCoins()).toBe(coins);
+      expect(Machine.getCoins()).toBe("coins");
     });
   });
 });
