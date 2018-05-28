@@ -6,9 +6,11 @@ let Machine = new notEnough(products, coins);
 
 describe("notEnough", () => {
   describe("when chooseProduct is called for product with not enough stock but enough money", () => {
-    it("should return Product with change", () => {
+    it("should return There is not more stock, pick another one", () => {
       const result = Machine.chooseProduct(products.Vodka.name, 3.0);
-      expect(result).toBe(result);
+      expect(result).toBe(
+        "There is no more stock left, please pick another product"
+      );
     });
   });
 });
