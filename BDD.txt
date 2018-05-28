@@ -45,8 +45,7 @@ Scenario:
     And when he sees that the inventory or change is below x amount.
     Then he should be able to input inventory and change that are below x through (function).
 
-
-
+Assuming customers are going to buy stuff and cannot dispense their change if they wish to not.
 
 
 
