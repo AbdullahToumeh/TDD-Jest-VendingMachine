@@ -1,6 +1,6 @@
 <h1>Vending Machine</h1>
-<img src="https://i.gyazo.com/9755ebfef939b0ff973c2d1cb0d18bbf.png" alt="https://gyazo.com/9755ebfef939b0ff973c2d1cb0d18bbf" width="996"/>
-<img src="https://i.gyazo.com/09bacd237ac63798ea4118e3232de1a9.png" alt="https://gyazo.com/09bacd237ac63798ea4118e3232de1a9" width="996"/>
+<img src="https://i.gyazo.com/a0ab05a324138e2ce88d9f88a7532732.png" alt="https://gyazo.com/a0ab05a324138e2ce88d9f88a7532732" width="996"/>
+<img src="https://i.gyazo.com/94bb5d5e8cc3157b54e7870501626f91.png" alt="https://gyazo.com/94bb5d5e8cc3157b54e7870501626f91" width="996"/>
 
 <h2>About </h2>
 <p>Vending machine is a Javascript class based TDD project meant to mock a vending machine</p>

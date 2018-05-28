@@ -78,13 +78,13 @@ describe("vendingMachine", () => {
     });
   });
   describe("when chooseProduct is called for product with stock without enough amountInsterted to price", () => {
-    it("should return There is no more stock left, please pick another product", () => {
+    it("should return You do not have enough money, please put in amount needed", () => {
       const result = Machine.chooseProduct(products.Coke.name, 1.5);
       expect(result).toBe("You do not have enough money, please put in 0.25");
     });
   });
   describe("when chooseProduct is called for product with stock without $0 amountInsterted to price", () => {
-    it("should return There is no more stock left, please pick another product", () => {
+    it("should return  You do not have enough money, please put in amount needed", () => {
       const result = Machine.chooseProduct(products.Coke.name, 0);
       expect(result).toBe("You do not have enough money, please put in 1.75");
     });
